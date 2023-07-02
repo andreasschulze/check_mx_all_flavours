@@ -1,5 +1,8 @@
 # check_mx_all_flavours
 
+[![Actions Status](https://github.com/andreasschulze/check_mx_all_flavours/workflows/Shellcheck/badge.svg)](https://github.com/andreasschulze/check_mx_all_flavours/actions?query=workflow%3AShellcheck)
+[![Actions Status](https://github.com/andreasschulze/check_mx_all_flavours/workflows/Markdownlint/badge.svg)](https://github.com/andreasschulze/check_mx_all_flavours/actions?query=workflow%3AMarkdownlint)
+
 ## Usage
 
 ```sh
