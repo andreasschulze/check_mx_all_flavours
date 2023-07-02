@@ -3,7 +3,7 @@
 ## Usage
 
 ```sh
-check_mx_all_flavours <domain>"
+check_mx_all_flavours <domain>
 ```
 
 It may be helpful to pipe the output though `column -t`
@@ -22,3 +22,7 @@ check all mx hosts of the given domain for
 The program is expected to be run on a system capable to establish
 outbound connection to port 25 over IPv4 and IPv4 and uses a validating
 DNS resolver.
+
+## Author
+
+Andreas Schulze
