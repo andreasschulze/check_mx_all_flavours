@@ -28,7 +28,6 @@ The following tools must be available in \$PATH:
 It may be helpful to pipe the output though 'column -t'
 
 Author: Andreas Schulze"
-exit 1
 }
 
 _error() {
@@ -41,7 +40,7 @@ _exists() {
   cmd="$1"
   if [ -z "$cmd" ]; then
     _usage "Usage: _exists cmd"
-    return 1
+    exit 1
   fi
 
   if eval type type >/dev/null 2>&1; then
@@ -136,7 +135,7 @@ check_all_flavours() {
       rm -f "${_tmp_s_client_output}"
 
       printf 'mx=%s[%s] tls=%s algo=%s reachable=%s starttls=%s pkix=%s dane=%s\n' \
-        "${mxhost_without_dot}" "${mx_address}" "${tls_protocol}" "${algo}" }
+        "${mxhost_without_dot}" "${mx_address}" "${tls_protocol}" "${algo}" \
         "${reachable}" "${starttls}" "${pkix_result}" "${dane_result}"
     done
   else
@@ -150,6 +149,7 @@ main() {
      [ '-help'  = "${domain}" ] || \
      [ '--help' = "${domain}" ]; then
     _usage
+    exit 0
   fi
 
   _exists 'awk'       || _error "awk is required"
