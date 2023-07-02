@@ -26,6 +26,17 @@ The program is expected to be run on a system capable to establish
 outbound connection to port 25 over IPv4 and IPv4 and uses a validating
 DNS resolver.
 
+## Requirements
+
+The following tools must be available in \$PATH:
+
+* awk
+* dig or kdig
+* ldns-dane
+* openssl
+* sed
+* sleep
+
 ## Author
 
 Andreas Schulze
